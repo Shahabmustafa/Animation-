@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.text{
+    color: #fff;
+    font-size: 4rem;
+}
+
+ul{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+ul li{
+    list-style: none;
+    color: crimson;
+    top: 0;
+    position: relative;
+    font-size: 4rem;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -400%;
+    }
+}
+
+ul li span{
+    position: relative;
+}
+
+ul li span::after{
+   content: "";
+   position: absolute;
+   background-color: #000;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   border-left: 2px solid crimson;
+   animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
